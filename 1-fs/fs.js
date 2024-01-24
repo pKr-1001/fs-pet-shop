@@ -72,6 +72,9 @@ import fs from "node:fs"; // ES6 modules
             // convert the array back to JSON
             const updatedPets = JSON.stringify(pets);
 
+            // if its new file "../pets1.json"
+            // we would just fs.appendFile and JSON.stringify(newpet)
+            
             fs.writeFile('../pets.json', updatedPets, (error) => {
                 if (error) {
                     throw error;
